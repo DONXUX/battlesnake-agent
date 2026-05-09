@@ -1,16 +1,12 @@
-# This is a sample Python script.
+import threading
+import time
+import os
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    # Fastapi 앱을 별도의 스레드에서 실행
+    def run_fastapi():
+        os.system('python main.py')
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    fastapi_thread = threading.Thread(target=run_fastapi)
+    fastapi_thread.start()
+

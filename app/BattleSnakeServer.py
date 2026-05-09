@@ -189,5 +189,5 @@ def create_app(handlers: typing.Dict):
 def run_server(handlers: typing.Dict, port: int = 8000) -> None:
     app = create_app(handlers)
     logging.getLogger('werkzeug').setLevel(logging.ERROR)
-    print(f"Running Battlesnake (Flask) at http://0.0.0.0:{port}")
-    app.run(host="0.0.0.0", port=port, threaded=False)
+    print(f"Running Battlesnake (Flask) at http://localhost:{port}")
+    app.run(host="localhost", port=port, threaded=False)
