@@ -109,7 +109,7 @@ workflow.add_edge("get_script", "propose_script")
 workflow.add_edge("propose_script", "evaluate_script")
 workflow.add_conditional_edges(
     "evaluate_script",
-    lambda state: "continue" if state["iterations"] < 3 and (
+    lambda state: "continue" if state["iterations"] < 10 and (
                 "Winner: Port 8000." in state["evaluation_result"] or "Evaluation inconclusive" in state[
             "evaluation_result"]) else "end",
     {
