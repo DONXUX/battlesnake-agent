@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx skills add:*)",
+      "WebFetch(domain:langfuse.com)",
+      "Bash(curl:*)",
+      "Bash(python -m py_compile:*)",
+      "Bash(python3 -m py_compile:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
